@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/phone.750.css')}}">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+
+<body>
+
+    <nav class="nav_bar">
+        <ul class="nav_link">
+            <li>
+                <a href="/"><img src="{{url_for('static',filename='images/nav-icon.png')}}" alt=""></a>
+            </li>
+        </ul>
+        <ul class="nav_link pr-6">
+            <li>
+                <a href="/" style="{{style }}">Home</a>
+            </li>
+
+            <li>
+                <a href="/profile/{{user.username}} " style="{{prof_style}}">Profile</a>
+            </li>
+
+            <li>
+                <a href="/logout ">Logout</a>
+            </li>
+        </ul>
+    </nav>
+
+    {% block body %} {% endblock %}
+</body>
+<script>
+    const tweet_report = document.getElementById('warning_message')
+    setTimeout(hideElement, 2000) //milliseconds until timeout//
+    function hideElement() {
+        tweet_report.style.display = 'none'
+    }
+    const tweet_warning = document.getElementById('tweet_warning')
+    setTimeout(hideTweetWarning, 5000)
+
+    function hideTweetWarning() {
+        tweet_warning.style.display = 'none'
+        if ("{{message}} " != " ") {
+            window.location.href = "/ "
+        }
+    }
+</script>
+
+</html>

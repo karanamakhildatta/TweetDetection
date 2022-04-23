@@ -1,0 +1,31 @@
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.img-round {
+    border-radius: 50%;
+}
+
+.font-18 {
+    font-size: 18px;
+}
+
+#profile {
+    width: 100%;
+    padding: 4px;
+    font-size: 20px;
+    background-color: rgba(168, 233, 245, 0.333);
+    outline: none;
+    margin: 3px auto;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}

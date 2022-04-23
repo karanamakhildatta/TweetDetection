@@ -1,0 +1,213 @@
+@media screen and (max-width: 1000px) {
+    .main-content-container {
+        width: 750px;
+        margin: 10px auto;
+    }
+    .col-1 {
+        width: 250px;
+    }
+    .col-2 {
+        width: 450px;
+    }
+    .card {
+        width: 240px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+    }
+    .card-lg-flex-abs {
+        width: 430px;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+        display: flex;
+        align-items: center;
+        position: absolute;
+    }
+    .card-lg {
+        width: 430px;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+    .card-large {
+        width: 750px;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+    #tweet-input {
+        width: 320px;
+        height: 100px;
+        font-size: 20px;
+        outline: none;
+    }
+    #tweet-submit {
+        padding: 6px 12px;
+        font-size: 18px;
+        position: relative;
+        left: 250px;
+        margin-top: 4px;
+        background-color: rgb(70, 202, 241);
+        border: 2px solid rgb(92, 217, 255);
+        border-radius: 45px;
+        cursor: pointer;
+        color: white;
+        transition: all 0.3s ease;
+    }
+    #profile-bg {
+        width: 100%;
+        height: 450px;
+        position: absolute;
+        background-size: cover;
+    }
+    #profile-image {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        top: 350px;
+        left: 5px;
+        border: 0.2px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+    }
+    .profile-container {
+        margin: 10px auto;
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .main-content-container {
+        width: 100%;
+        margin: 10px auto;
+    }
+    .row {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .col-1 {
+        width: 80%;
+        margin: auto;
+    }
+    .col-2 {
+        width: 80%;
+        margin: 10px auto;
+    }
+    .card {
+        width: 100%;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+        height: 150px;
+    }
+    .card-lg-flex-abs {
+        width: 80%;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+        display: flex;
+        align-items: center;
+        position: absolute;
+        justify-content: center;
+    }
+    .card-lg {
+        width: 100%;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+    .card-large {
+        width: 100%;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+    #tweet-input {
+        width: 100%;
+        height: 100px;
+        font-size: 20px;
+        outline: none;
+        margin: 2px;
+    }
+    #tweet-submit {
+        padding: 3px 6px;
+        font-size: 18px;
+        position: relative;
+        bottom: 3px;
+        left: 80%;
+        margin-top: 4px;
+        background-color: rgb(70, 202, 241);
+        border: 2px solid rgb(92, 217, 255);
+        border-radius: 45px;
+        cursor: pointer;
+        color: white;
+        transition: all 0.3s ease;
+    }
+    #profile-bg {
+        width: 100%;
+        height: 450px;
+        position: absolute;
+        background-size: cover;
+    }
+    #profile-image {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        top: 350px;
+        left: 5px;
+        border: 0.2px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+    }
+    .profile-container {
+        margin: 10px auto;
+        width: 100%
+    }
+    .report_container {
+        width: 85%;
+        margin: 10px auto;
+    }
+    .report_form {
+        width: 100%;
+        align-items: center;
+    }
+    .report_form>form>input,
+    .report_form>form>select {
+        width: 100%;
+        padding: 10px;
+        margin: 10px;
+        font-size: 18px;
+        outline: none;
+        border: 2px solid rgb(92, 217, 255)
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #tweet-input {
+        width: 100%;
+        height: 100px;
+        font-size: 20px;
+        outline: none;
+    }
+    #tweet-submit {
+        padding: 2px 4px;
+        font-size: 16px;
+        position: relative;
+        top: 5%;
+        left: 80%;
+        margin-top: 4px;
+        background-color: rgb(70, 202, 241);
+        border: 2px solid rgb(92, 217, 255);
+        border-radius: 45px;
+        cursor: pointer;
+        color: white;
+        transition: all 0.3s ease;
+    }
+    .card-lg-flex-abs {
+        width: 80%;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+        display: flex;
+        align-items: center;
+        position: absolute;
+        justify-content: center;
+        flex-direction: column;
+        height: 280px;
+    }
+    .height-180 {
+        height: 280px;
+    }
+    .form-img {
+        padding: 10px;
+    }
+    .form-img img {
+        width: 90px;
+        height: 90px;
+    }
+}

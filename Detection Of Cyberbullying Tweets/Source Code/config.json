@@ -1,0 +1,10 @@
+{
+    "params": {
+        "local_server": "True",
+        "local_uri": "mysql://root:@localhost/twitter",
+        "admin_email": "akhildatta555@gmail.com",
+        "admin_name": "AkhilDatta",
+        "admin_password": "11199A110@Akhildatta.com",
+        "Secret_Key": "super-secret-key"
+    }
+}

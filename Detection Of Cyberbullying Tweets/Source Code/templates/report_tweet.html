@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}{% block title %} Report Tweet | {{user.username}}{% endblock %} {% block body %}
+<div class="{{color_display}}">
+    <h3 id="warning_message" style="text-align: center;font-size: 22; margin-top: 6px;">{{message}}</h3>
+</div>
+<div class="card-lg" style="margin:14px auto;">
+    <div class="message-box">
+        <div class="message-heading">
+            <a href="/profile/{{tweet[0].username}}" class="message-from">{{tweet[1].first_name}} {{tweet[1].last_name}}</a>
+            <p class="message-username">[@{{tweet[1].username}}]</p>
+        </div>
+        <div class="message-info">
+            <p class="message">{{tweet[0].tweet_text}} </p>
+        </div>
+    </div>
+</div>
+
+<h1 style="text-align:center;padding:6px;font-size: 24px;color:rgb(73, 211, 245)">Report Form</h1>
+<div class="report_container">
+    <div class="report_form">
+        <form action="/tweet/report/{{tweet[0].tweet_id}}" method="POST">
+            <label for="k">User name</label>
+            <input type="text" name="report_id" id="report_id" value="{{user.username}}" disabled>
+            <label for="m">Select the Option</label>
+            <select name="report_text" id="report_text">
+                <option value="Private information is being posted">Private information is being posted</option>
+                <option value="This tweet is harssing me or someone else">This tweet is harssing me or someone else</option>
+                <option value="This tweet bullying me or someone">This tweet bullying me or someone else</option>
+                
+            </select>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</div>
+{% endblock %}

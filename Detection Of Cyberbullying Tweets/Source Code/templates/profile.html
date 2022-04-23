@@ -1,0 +1,35 @@
+{% extends "layout.html" %}{% block title %} Profile | {{required_user.username}} {% endblock %} {% block body %}
+<div class="profile-image-holder">
+    <div class="profile-img-container">
+        <img id="profile-bg" src="{{url_for('static',filename='images/bg-img.png')}}" alt="profile-bg-ico ">
+        <img id="profile-image" src="{{url_for('static',filename='images/upload/'+required_user.prof_image)}}" alt="user-ico ">
+    </div>
+</div>
+<div class="tweet-container">
+    <div class="profile-container">
+        <div class="message-box">
+            <div class="message-heading">
+                <span class="message-username">Name : <a href="/profile/{{required_user.username}}" class="message-from">{{required_user.first_name}} {{required_user.last_name}}</a></span>
+            </div>
+            <div class="message-heading">
+                <span class="message-username">Email : <a href="/profile/{{required_user.username}}" class="message-from">{{required_user.mail_id}}</a></span>
+            </div>
+            <div class="message-heading">
+                <span class="message-username">User Name : <span class="message-from">@{{required_user.username}}</span></span>
+            </div>
+            <div class="message-heading">
+                <span class="message-username">Joined On : <span class="message-from">{{required_user.joined_on}}</span></span>
+            </div>
+            <div class="message-heading">
+                <span class="message-username">Date of Birth : <span class="message-from" >{{required_user.date_of_birth}}</span></span>
+            </div>
+
+        </div>
+        {% if user.username == required_user.username %}
+        <div class="message-end">
+            <a href="/update/{{user.username}}">Edit</a>
+
+        </div>
+        {% endif %}
+    </div>
+    {% endblock %}

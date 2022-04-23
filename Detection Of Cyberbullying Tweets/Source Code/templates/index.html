@@ -1,0 +1,59 @@
+{% extends "layout.html" %} {% block title %} Welcome | {{user.username}} {% endblock %} {% block body %}
+<div class="{{color_display}}">
+    <h3 id="tweet_warning" style="text-align: center;font-size: 22; margin-top: 6px;">{{message}}</h3>
+</div>
+<div class="main-content-container ">
+    <div class="row ">
+        <div class="col-1 ">
+            <div class="card height-160">
+                <img class="profile-img" src="{{url_for('static',filename='images/upload/'+user.prof_image)}}" alt="profile image">
+                <a href="/profile/{{user.username}}" class="profile-name">{{user.first_name}} {{user.last_name}}</a>
+                <p class="profile-username">@{{user.username}}</p>
+            </div>
+        </div>
+
+        <div class="col-2 ">
+            <div class="height-180">
+
+                <!-- <h4 class="text-center">{{message}}</h4> -->
+                <div class="card-lg-flex-abs height-160">
+                    <div class="form-img">
+                        <img src="{{url_for('static',filename='images/nav-icon.png')}}" alt="user">
+                    </div>
+                    <form class="form" action="/" method="POST">
+                        <input id="tweet-input" type="text" placeholder="What's happening?" name="tweet-input" required>
+                        <input id="tweet-submit" type="submit" value="Tweet">
+                    </form>
+                </div>
+            </div>
+            <div class="tweets">
+                {% for tweet in tweets %}
+                <div class="card-lg">
+                    <div class="message-box">
+                        <div class="message-heading">
+                            <a href="/profile/{{tweet[0].username}}" class="message-from">{{tweet[0].first_name}} {{tweet[0].last_name}}</a>
+                            <p class="message-username">[@{{tweet[0].username}}]</p>
+                        </div>
+                        <div class="message-info">
+                            <p class="message">{{tweet[1].tweet_text}} </p>
+                        </div>
+                    </div>
+                    <div class="message-end">
+                        {% if user.s_no != tweet[0].s_no %}
+                        <a href="tweet/report/{{tweet[1].tweet_id}}">report</a> {% endif %} {% if user.s_no == tweet[0].s_no %}
+                        <a href="/delete/{{tweet[1].tweet_id}}">delete</a> {% endif %}
+                    </div>
+
+
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</div>
+{% endblock %}

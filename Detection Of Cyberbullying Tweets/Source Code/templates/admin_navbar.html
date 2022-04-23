@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block navbar %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/admin/users">{{admin}}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link {% block style %} {% endblock %}" aria-current="page" href="/admin/users">Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% block tweet_style %} {% endblock %}" href="/admin/tweets">Tweets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% block report_style %} {% endblock %}" href="/admin/reports">Reports</a>
+                </li>
+            </ul>
+            <a href="/admin/logout" class="ml-3 btn btn-sm btn-warning">Log Out</a>
+
+        </div>
+    </div>
+</nav>
+{% endblock %}

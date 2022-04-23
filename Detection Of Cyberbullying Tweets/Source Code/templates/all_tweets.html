@@ -1,0 +1,30 @@
+{% extends 'admin_navbar.html' %} {% block title %} Welcome to Admin Portal | all Tweets{% endblock %}{% block tweet_style %} active {% endblock %} {% block body %}
+<div class="container-fluid mt-4">
+    {% if tweets|length == 0 %}
+    <h2 style="color:aqua;text-align: center;">No Report Found</h2>
+    {% else %}
+    <table class="table table-striped table-hover bg-light small">
+        <tr class="table-dark">
+            <th>ID</th>
+            <th>Tweeted By</th>
+            <th>Tweet Text</th>
+            <th>Cyber Bullying</th>
+            <th>Delete</th>
+        </tr>
+        {% for tweet in tweets %}
+        <tr>
+            <td>{{loop.index}}</td>
+            <td>{{tweet[1].first_name}} {{tweet[1].last_name}}</td>
+            <td>{{tweet[0].tweet_text}}</td>
+            <td>{{tweet[0].cyber_bullying}}</td>
+            <td><a href="/admin/tweet/{{tweet[0].tweet_id}}" class="btn btn-sm btn-block btn-danger">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+</div>
+
+
+
+
+{% endblock %}
